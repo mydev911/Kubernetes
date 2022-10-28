@@ -1,4 +1,5 @@
 # Minikube on AWS
+- Minimum 2cpu 4GB ram 
 - install as regular user -- with sudo
 - install as root user -- wihtout sudo
 
