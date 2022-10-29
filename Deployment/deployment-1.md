@@ -1,4 +1,7 @@
 ```
+vim deployment.yml
+```
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,3 +25,24 @@ spec:
           ports:
           - containerPort: 80
 ```
+- apply
+```
+kubectl apply -f deployment.yml
+```
+```
+kubectl apply -f deployment.yml --record=true
+```
+```
+kubectl rollout history
+```
+- first time deployment
+```
+kubectl describe Deployment_Name
+```
+- delete
+```
+kubectl delete -f deployment.yml
+```
+
+
+
