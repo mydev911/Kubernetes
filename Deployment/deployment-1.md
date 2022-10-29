@@ -43,6 +43,38 @@ kubectl describe Deployment_Name
 ```
 kubectl delete -f deployment.yml
 ```
+- show lable
+```
+kubectl get pods --show-labels
+```
 
+## Roll-out /  
+### Option-1
+- Change ngnix version on yml file
+```
+kubectl apply -f deployment.yml --record=true
+```
+- when you have multiple update. you can check previous update history with revision
+```
+kubectl rollout history Deployment_name --revision=1
+```
+### roll-out
+```
+kubectl rollout undo Deployment_Name --to-revision=2
+```
+### Option-2
+```
+kubectl set image Deployment_Name nginx=nginx:1.12.1 --record=true
+```
+### ErrImagePull  and status -- ImagePullBackOFF
+- just put worng image / worng version / Version is avelable
+### Option -3
 
+## How to pause Rollout process
+```
+kubectl rollout pause Deployment_name
+```
+```
+kubectl rollout resume Deployment_Name
+```
 
