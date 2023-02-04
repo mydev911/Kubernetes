@@ -54,6 +54,7 @@ Keyboard hints:
 
 ```
 $ kubectl get pods
+kubectl run web-server --image=ngnix
 $ kubectl get pods --all-namespaces
 $ kubectl get pod monkey -o wide
 $ kubectl get pod monkey -o yaml
